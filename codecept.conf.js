@@ -14,8 +14,14 @@ exports.config = {
       show: true,
       restart:false,
       fullPageScreenshots: true,
-      waitForTimeout: 10000,
+      // waitForTimeout: 10000,
       windowSize: '1920x1200',
+      // browser: 'firefox',
+      chrome: {
+        args: [
+            '--incognito',
+        ],
+      },
     }
   },
   include: {
@@ -23,9 +29,9 @@ exports.config = {
   },
   bootstrap: null,
   mocha: {},
-  multiple: {
-    browsers: ["chrome", "firefox"]
-  },
+  //  multiple: {
+  //   browsers: ["chrome", "firefox"]
+  // },
   name: 'my-auto-e2e-tests',
   plugins: {
     retryFailedStep: {
