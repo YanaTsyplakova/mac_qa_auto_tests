@@ -7,10 +7,15 @@ setHeadlessWhen(process.env.HEADLESS);
 exports.config = {
   tests: './*_test.js',
   output: './output',
+  timeout: 10000,
   helpers: {
     Puppeteer: {
-      url: 'http://localhost',
-      show: true
+      url: 'http://sjob-dev.ru',
+      show: true,
+      restart:false,
+      fullPageScreenshots: true,
+      waitForTimeout: 10000,
+      windowSize: '1920x1200',
     }
   },
   include: {
@@ -18,6 +23,9 @@ exports.config = {
   },
   bootstrap: null,
   mocha: {},
+  multiple: {
+    browsers: ["chrome", "firefox"]
+  },
   name: 'my-auto-e2e-tests',
   plugins: {
     retryFailedStep: {
