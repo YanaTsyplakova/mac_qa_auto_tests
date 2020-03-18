@@ -15,11 +15,7 @@ exports.config = {
       fullPageScreenshots: true,
       waitForAction: 1000,
       windowSize: '1366x768',
-      chrome: {
-        args: [
-            '--incognito',
-        ],
-      },
+      browser: 'firefox',
     }
   },
   include: {
@@ -27,9 +23,6 @@ exports.config = {
   },
   bootstrap: null,
   mocha: {},
-  //  multiple: {
-  //   browsers: ["chrome", "firefox"]
-  // },
   name: 'my-auto-e2e-tests',
   rerun: {
     minSuccess: 10,
