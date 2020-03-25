@@ -14,8 +14,13 @@ exports.config = {
       restart:false,
       fullPageScreenshots: true,
       waitForAction: 1000,
-      windowSize: '1366x768',
       browser: 'firefox',
+      firefox: {
+        defaultViewport: {
+          width: 1366,
+          height: 768,
+        }
+      },
     }
   },
   include: {
