@@ -9,7 +9,7 @@ exports.config = {
   output: './output',
   helpers: {
     Puppeteer: {
-      url: 'http://sjob-dev.ru',
+      // url: 'http://sjob-dev.ru',
       show: true,
       restart:false,
       fullPageScreenshots: true,
