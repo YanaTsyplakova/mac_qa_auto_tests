@@ -7,4 +7,6 @@ module.exports = {
   },
   field: '#tinymce',
   iframe: '#mce_0_ifr',
+  url: 'http://the-internet.herokuapp.com/'
+
 }
