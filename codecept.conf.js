@@ -7,19 +7,20 @@ setHeadlessWhen(process.env.HEADLESS);
 exports.config = {
   tests: './tests/*_test.js',
   output: './output',
+  multiple: {
+    basic: {
+      browsers: ['chromium', 'firefox', 'webkit']
+    },
+  },
   helpers: {
-    Puppeteer: {
-      // url: 'http://sjob-dev.ru',
+    Playwright: {
+      url: 'https://the-internet.herokuapp.com/',
       show: true,
       restart:false,
       fullPageScreenshots: true,
       waitForAction: 1000,
       windowSize: '1366x768',
-      chrome: {
-        args: [
-            '--incognito',
-        ],
-      },
+      browser: 'webkit',
     }
   },
   include: {
@@ -27,9 +28,6 @@ exports.config = {
   },
   bootstrap: null,
   mocha: {},
-  //  multiple: {
-  //   browsers: ["chrome", "firefox"]
-  // },
   name: 'my-auto-e2e-tests',
   rerun: {
     minSuccess: 10,
@@ -39,8 +37,12 @@ exports.config = {
     retryFailedStep: {
       enabled: true
     },
+    pauseOnFail: {
+      enabled: true
+    },
     screenshotOnFail: {
       enabled: true
-    }
+    },
+      allure: {}
   }
 }

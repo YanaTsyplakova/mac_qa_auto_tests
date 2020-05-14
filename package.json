@@ -16,5 +16,8 @@
     "eslint-plugin-import": "^2.20.1",
     "puppeteer": "^2.1.1",
     "puppeteer-firefox": "^0.5.1"
+  },
+  "dependencies": {
+    "playwright": "^1.0.1"
   }
 }
