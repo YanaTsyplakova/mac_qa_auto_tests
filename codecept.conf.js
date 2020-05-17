@@ -4,6 +4,8 @@ const { setHeadlessWhen } = require('./node_modules/@codeceptjs/configure');
 // HEADLESS=true npx codecept run
 setHeadlessWhen(process.env.HEADLESS);
 
+// console.log(process.env.BROWSER)
+
 exports.config = {
   tests: './tests/*_test.js',
   output: './output',
@@ -14,20 +16,20 @@ exports.config = {
   },
   helpers: {
     Playwright: {
-      url: 'https://the-internet.herokuapp.com/',
+      url: 'https://the-internet.herokuapp.com',
+      browser: process.profile || 'chromium',
       show: true,
       restart:false,
       fullPageScreenshots: true,
-      waitForAction: 1000,
+      waitForAction: 2000,
       windowSize: '1366x768',
-      browser: 'webkit',
-    }
+    },
   },
   include: {
     I: './steps_file.js'
   },
   bootstrap: null,
-  mocha: {},
+  mocha: {},  
   name: 'my-auto-e2e-tests',
   rerun: {
     minSuccess: 10,
@@ -43,6 +45,6 @@ exports.config = {
     screenshotOnFail: {
       enabled: true
     },
-      allure: {}
-  }
+    allure: {}
+  },
 }
