@@ -9,12 +9,10 @@ setHeadlessWhen(process.env.HEADLESS);
 exports.config = {
   tests: './tests/*_test.js',
   output: './output',
-  multiple: {
-    basic: {
-      browsers: ['chromium', 'firefox', 'webkit']
-    },
-  },
   helpers: {
+    goback: {
+      require: './helpers/goBack.js',
+    },
     Playwright: {
       url: 'https://the-internet.herokuapp.com',
       browser: process.profile || 'chromium',
