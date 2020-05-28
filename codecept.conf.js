@@ -11,7 +11,7 @@ exports.config = {
   output: './output',
   helpers: {
     goback: {
-      require: './helpers/goBack.js',
+      require: './helpers/goBackHelper.js',
     },
     Playwright: {
       url: 'https://the-internet.herokuapp.com',
