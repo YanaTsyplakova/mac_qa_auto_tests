@@ -10,3 +10,8 @@ Scenario('Переходы по ссылкам', async (I) => {
     I.click(linksPage.fileUpload);
     I.waitForText('File Uploader', 5, '//h3');
 });
+
+
+Scenario('Проверка теста на ошибку', async (I) => {
+    I.amOnPage("https://the-internet.herokuapp.com/javascript_error")
+});
