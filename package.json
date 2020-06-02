@@ -18,6 +18,6 @@
     "puppeteer-firefox": "^0.5.1"
   },
   "dependencies": {
-    "playwright": "^1.0.1"
+    "playwright": "^1.0.2"
   }
 }
