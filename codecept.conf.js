@@ -38,7 +38,7 @@ exports.config = {
       enabled: true
     },
     pauseOnFail: {
-      enabled: true
+      enabled: false
     },
     screenshotOnFail: {
       enabled: true
