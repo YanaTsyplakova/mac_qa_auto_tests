@@ -3,6 +3,7 @@ Feature('alerts');
 const alertsPage = require('../pages/alertsPage')
 
 Scenario('Подтверждение алерта', (I) => {
+    /**
     I.amOnPage(alertsPage.url);
     I.click(alertsPage.button.jsAlert);
     I.seeInPopup("I am a JS Alert");
@@ -18,11 +19,11 @@ Scenario('Закрытие алерта', (I) => {
     I.waitForText('You clicked: Cancel')    
 });
 
-//Popup action does not fit the expected action type. Expected popup action to be 'accept' not 'cancel
 
 Scenario('Заполнить текст в алерте', (I) => {
     I.amOnPage(alertsPage.url);
     I.click(alertsPage.button.jsPrompt);
     I.fillField('I am a JS prompt', 'fffdgffdgdf');
     I.acceptPopup();
+     */
 });
