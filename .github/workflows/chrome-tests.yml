@@ -16,7 +16,7 @@ env:
 jobs:
   build:
     name: 'Chromium'
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-18.04
     strategy:
       matrix:
         node-version: [12.x]
@@ -29,7 +29,7 @@ jobs:
     - name: install required packages
       run: |
         sudo apt-get update
-        sudo apt-get install libgbm1 libgbm-dev libwoff1 libopus0 libwebp6 libwebpdemux2 libenchant1c2a libgudev-1.0-0 libsecret-1-0 libhyphen0 libgdk-pixbuf2.0-0 libegl1 libgles2 libevent-2.1-6 libnotify4 libxslt1.1
+        sudo apt-get install libgbm1 libgbm-dev libwoff1 libopus0 libwebp6 libwebpdemux2 libenchant1c2a libgudev-1.0-0 libsecret-1-0 libhyphen0 libgdk-pixbuf2.0-0 libegl1 libgles2 libnotify4 libxslt1.1
     - name: npm install
       run: |
         npm install
