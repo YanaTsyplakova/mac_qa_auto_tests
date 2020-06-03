@@ -1,7 +1,7 @@
 Feature('Editor');
 const wysiwygPage = require('../pages/wysiwygPage')
 
-Scenario('Работа с WYSIWYG Editor', (I) => {
+xScenario('Работа с WYSIWYG Editor', (I) => { 
     I.amOnPage(wysiwygPage.url);
     I.click('WYSIWYG Editor');
     I.switchTo(wysiwygPage.iframe);
@@ -14,5 +14,4 @@ Scenario('Работа с WYSIWYG Editor', (I) => {
     I.switchTo(wysiwygPage.iframe);
     I.fillField(wysiwygPage.field,'MMMMMMM');
     I.saveScreenshot('really_bold_test.png');
-
 });
