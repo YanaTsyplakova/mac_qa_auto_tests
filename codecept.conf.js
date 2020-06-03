@@ -16,7 +16,7 @@ exports.config = {
     Playwright: {
       url: 'https://the-internet.herokuapp.com',
       browser: process.profile || 'chromium',
-      show: true,
+      show: false,
       restart:false,
       fullPageScreenshots: true,
       waitForAction: 2000,
