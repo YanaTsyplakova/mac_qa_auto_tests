@@ -16,6 +16,6 @@
     "eslint-plugin-import": "^2.21.2"
   },
   "dependencies": {
-    "playwright": "^1.1.0"
+    "playwright": "^1.2.1"
   }
 }
